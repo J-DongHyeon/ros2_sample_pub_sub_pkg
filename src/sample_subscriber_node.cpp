@@ -6,7 +6,7 @@
 SampleSubscriberNode::SampleSubscriberNode()
 	:Node("sample_subscriber_node")
 {
-	auto qos_profile = rclcpp::Qos(rclcpp::KeepLast(10));
+	auto qos_profile = rclcpp::QoS(rclcpp::KeepLast(10));
 	sub_hello_world_ = this->create_subscription<std_msgs::msg::String>(
 		"/helloworld",
 		qos_profile,

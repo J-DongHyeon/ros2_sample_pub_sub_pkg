@@ -5,7 +5,7 @@
 #include <memory>
 #include <string>
 
-
+using namespace std::chrono_literals;
 
 SamplePublisherNode::SamplePublisherNode()
 	: Node("sample_publisher_node")
@@ -17,7 +17,7 @@ SamplePublisherNode::SamplePublisherNode()
 		, qos_profile);
 
 	timer_ = this->create_wall_timer(
-		std::chrono_literals::1s,
+		1s,
 		std::bind(&SamplePublisherNode::OnTimerElapsed, this));
 }
 

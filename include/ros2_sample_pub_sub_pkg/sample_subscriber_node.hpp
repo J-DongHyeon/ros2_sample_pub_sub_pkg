@@ -12,5 +12,5 @@ public:
 	SampleSubscriberNode();
 
 private:
-	void OnSubscribed_hello_world();
+	void OnSubscribed_hello_world(const std_msgs::msg::String::SharedPtr hello_world);
 };
